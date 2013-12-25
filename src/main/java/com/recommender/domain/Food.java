@@ -5,6 +5,7 @@ public class Food {
 	int id;
 	String name;
 	String realId;
+	Double prediction;
 	
 	public int getId() {
 		return id;
@@ -24,7 +25,12 @@ public class Food {
 	public void setRealId(String realId) {
 		this.realId = realId;
 	}
+	public Double getPrediction() {
+		return prediction;
+	}
+	public void setPrediction(Double prediction) {
+		this.prediction = prediction;
+	}
 
-	
 	
 }

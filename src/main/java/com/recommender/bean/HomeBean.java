@@ -40,12 +40,16 @@ public class HomeBean {
 		Map<String, String> parameterMap = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
 		String username=parameterMap.get("username");
 		Integer userID= HZClient.loadIDUserMap().get(username);
-		List<Integer> productList= HZClient.loadUserProductMap().get(userID);
+		List<String> productList= HZClient.loadUserProductMap().get(userID);
 		Map<Integer, String> productMap = HZClient.loadIDProductMap();
 		
-		for(Integer id: productList){
-			food.setId(id);
-			food.setName(productMap.get(id));
+		for(String str: productList){
+			
+			String[] split = str.split(":");
+			
+			food.setId(new Integer(split[0]));
+			food.setName(productMap.get(new Integer(split[0])));
+			food.setPrediction(new Double(split[1]));
 			foodList.add(food);
 			food=new Food();
 		}

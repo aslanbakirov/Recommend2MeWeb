@@ -34,8 +34,8 @@ public class LoginBean {
 	public void login(ActionEvent actionEvent) {
 		if (("test".equalsIgnoreCase(getUsername())
 				&& "test".equals(getPassword())) || ("aslan".equalsIgnoreCase(getUsername())
-						&& "aslan".equals(getPassword())) || ("kevser".equalsIgnoreCase(getUsername())
-								&& "kevser".equals(getPassword())) ) {
+						&& "aslan".equals(getPassword())) || ("fat".equalsIgnoreCase(getUsername())
+								&& "fat".equals(getPassword())) ) {
 			try {
 				FacesContext.getCurrentInstance().getExternalContext().redirect("home.xhtml?username=" +getUsername());
 			} 

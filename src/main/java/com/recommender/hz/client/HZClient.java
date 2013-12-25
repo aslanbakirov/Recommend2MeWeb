@@ -11,7 +11,7 @@ public class HZClient {
 
 	
 
-	public static Map<Integer, List<Integer>> loadUserProductMap(){
+	public static Map<Integer, List<String>> loadUserProductMap(){
 		return getHZClientInstance().getMap("userProductMap");
 	}
 	
